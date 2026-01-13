@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
    name: mydeployments
+   namespace: mystage
 spec:
-   replicas: 2
+   replicas: 5
    selector:
     matchLabels:
      name: deployment
@@ -16,5 +17,5 @@ spec:
       containers:
         - name: myc1
           image: jenkins/jenkins
-          command: ["/bin/bash", "-c", "while true; do echo Technical-Guftgu; sleep 5; done"]
+          command: ["/bin/bash", "-c", "while true; do echo wellcome bengaluru; sleep 10; done"]
 
